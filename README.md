@@ -13,16 +13,6 @@
 
 4. Fazer um modo de *---Endless---*.
 
-### Repositório de código
-
-1) Link para o repositório do GitHub: https://github.com/SpardaMarco/Projeto-FP-Laserwave
-
-2) Adicionar, como colaborador com permissão de leitura (*role read*):
-
-
-- https://github.com/nmacedo
-- https://github.com/rpmcruz
-
 
 ### Descrição
 
