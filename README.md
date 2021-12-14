@@ -13,6 +13,7 @@
 
 4. Tentar produzir todas as resources possíveis do projeto.
 
+5. Convencer o Professor __JCL__ a experimentar o meu jogo.
 
 ### Descrição
 
