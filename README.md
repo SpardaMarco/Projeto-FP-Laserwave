@@ -16,7 +16,8 @@
 
 ### Descrição
 
-*---É um jogo de bullet-hell-like rhythmic shooter onde as tuas ações são definidas pela música. O objetivo do jogo é sobreviver o máximo de tempo e derrotar o máximo de inimigos. 
+*---É um jogo de bullet-hell-like rhythmic shooter onde as tuas ações são definidas pela música. O objetivo do jogo é sobreviver o máximo de tempo e derrotar o máximo de inimigos.
+
 Agarra o teu rato...
 
 Aumenta o volume...
