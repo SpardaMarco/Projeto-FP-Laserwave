@@ -11,7 +11,7 @@
 
 3. Organizar o meu primeiro projeto solo.
 
-4. Fazer um modo de *---Endless---*.
+4. Tentar produzir todas as resources possíveis do projeto.
 
 
 ### Descrição
@@ -25,7 +25,11 @@ Sente o ritmo!---*
 
 ### UI
 
-![UI](ui.png)
+![UI1](screenshots/LaserwaveUI1.png)
+![UI2](screenshots/LaserwaveUI2.png)
+![UI3](screenshots/LaserwaveUI3.png)
+![UI4](screenshots/LaserwaveUI4.png)
+
 
 ### Pacotes
 
@@ -33,9 +37,5 @@ Sente o ritmo!---*
 
 ### Tarefas
 
-1. carregar os níveis
-1. desenhar a matriz do nível
-1. ler teclas e mover as peças
-2. verificar se jogador chegou ao fim do nível
 
 - Atualizado a última vez em 07/12/2021
