@@ -39,5 +39,6 @@ Sente o ritmo!---*
 
 ### Tarefas
 
+- Fazer com que o Player se mexa com intervalos de tempo aleatórios
 
 - Atualizado a última vez em 07/12/2021
