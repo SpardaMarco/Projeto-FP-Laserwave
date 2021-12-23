@@ -41,4 +41,4 @@ Sente o ritmo!---*
 
 - Fazer com que o Player se mexa com intervalos de tempo aleatórios
 
-- Atualizado a última vez em 07/12/2021
+- Atualizado a última vez em 23/12/2021
