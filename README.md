@@ -5,15 +5,13 @@
 
 ### Objetivo
 
-1. Criar um clone do jogo [Laserwave](https://ambrits.itch.io/laserwave) em Pygame.
+1. Criar um clone simples da 1º versão do jogo [Laserwave](https://ambrits.itch.io/laserwave) em Pygame.
 
-2. Partilhar algumas músicas específicas.
+2. Organizar o meu primeiro projeto solo.
 
-3. Organizar o meu primeiro projeto solo.
+3. Tentar produzir todas as resources possíveis do projeto.
 
-4. Tentar produzir todas as resources possíveis do projeto.
-
-5. Convencer o Professor __JCL__ a experimentar o meu jogo.
+4. Convencer o Professor __JCL__ a experimentar o meu jogo.
 
 ### Descrição
 
