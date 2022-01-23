@@ -5,13 +5,14 @@ class Credits:
     background_color = (17, 23, 31)
 
 
-    def __init__(self, screen, state_machine, my_font, credits_font) -> None:
+    def __init__(self, screen, state_machine, my_font, credits_font):
         self.screen = screen
         self.state_machine = state_machine
         self.my_font = my_font
         self.credits_font = credits_font
 
     def gameloop(self, dt_sec):
+        '''Checks for inputs'''
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 self.state_machine.event_all_to_quit()
@@ -21,6 +22,8 @@ class Credits:
 
 
         self.screen.fill(self.background_color)
+        
+        #Text
 
         text_surface = self.my_font.render("Thanks for playing", False, (254,254,70))
         credits_1_surface = self.credits_font.render("Made for PROJ FP 2021/2022 by Marco Costa", False, (254,254,70))

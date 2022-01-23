@@ -9,7 +9,7 @@ class Bullet:
 
 
 
-    def __init__(self, game, start) -> None:
+    def __init__(self, game, start):
         self.game = game
         self.delta = 0
         self.lifetime = 0.2
@@ -17,7 +17,6 @@ class Bullet:
         mouse_pos = pygame.mouse.get_pos()
         direction = direction_vector(start, mouse_pos)
         end = [start[0]+ direction[0]*10000, start[1]+ direction[1]*10000]
-        #self.bullet_sound.play()
 
         self.coordinates = [start, end]
 
@@ -58,6 +57,7 @@ class Bullet:
         return True
         
     def check_bullet(self, dt):
+        '''Delete Bullet'''
         self.delta += dt
         if self.delta >= self.lifetime:
             return True

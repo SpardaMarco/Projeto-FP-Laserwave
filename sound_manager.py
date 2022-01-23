@@ -17,24 +17,30 @@ class Sound:
 
     
     def play_game_music(self):
+        '''Plays game music'''
         pygame.mixer.music.load(self.game_music)
         pygame.mixer.music.play(-1)
     
     def play_menu_music(self):
+        '''Plays menu music'''
         pygame.mixer.music.load(self.menu_music)
         pygame.mixer.music.play(-1)
 
     def play_bullet_sound(self):
+        '''Plays bullet sfx'''
         self.bullet_sound.play()
     
     def play_boost_sound(self):
+        '''Plays boost sfx'''
         self.boost_sound.play()
 
     def reset(self):
+        '''Resets sound manager'''
         self.counter = 0
         self.dt = 0
 
     def check_event(self, dt_sec):
+        '''Makes the Rythym'''
         self.dt += dt_sec
         
         if self.dt >= self.rythym[self.counter]:

@@ -9,15 +9,21 @@ import rythm_display
 class Game:
     #Constants
     background_color = (17, 23, 31)
-    def __init__(self, screen, state_machine) -> None:
-        self.enemy_list = [] # List of enemies
+    def __init__(self, screen, state_machine):
+        self.enemy_list = [] 
         self.bullet_list = []
+
         self.screen = screen
+
         self.state_machine = state_machine
+
         self.sound_manager = state_machine.sound_manager
         self.sound_manager.reset()
+
         self.rythm_display = rythm_display.RythmDisplay(self)
+        
         self.player = player.Player(self)
+
         self.enemy1_spawner = enemy1_spawner.Spawner(self)
         self.enemy2_spawner = enemy2_spawner.Spawner2(self)
         

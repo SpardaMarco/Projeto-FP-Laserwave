@@ -5,7 +5,7 @@ import credits
 import sound_manager
 
 class State_Machine:
-    def __init__(self) -> None:
+    def __init__(self):
         self.state = "Menu"
         self.sound_manager = sound_manager.Sound()
         self.sound_manager.play_menu_music()
@@ -16,7 +16,7 @@ class State_Machine:
         self.timer_started = False
 
 
-    
+    #State Machine changes
     def event_all_to_quit(self):
         self.state = "Quit"
     
@@ -45,7 +45,7 @@ class State_Machine:
 clock = pygame.time.Clock()
 pygame.init()
 
-
+#Fonts
 pygame.font.init() 
 menu_font = pygame.font.Font("assets/fonts/Shockwave.ttf", 50)
 credits_font = pygame.font.SysFont("Comic Sans MS", 30)
@@ -59,6 +59,7 @@ gameloop = True
 window_size = (1280, 720) #Game Canvas Size
 screen = pygame.display.set_mode(window_size) # Initiate the window
 
+#Window Bar
 pygame.display.set_caption("Laserwave")
 icon = pygame.image.load('Entities/Player.png')
 pygame.display.set_icon(icon)

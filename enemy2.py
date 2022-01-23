@@ -5,8 +5,7 @@ from utils import *
 
 class Enemy2:
     class False_Body:
-        def __init__(self, parent): # Init Function
-            #set variables
+        def __init__(self, parent):
             self.parent = parent
             self.pos = parent.pos.copy()
             self.pos[1] += 200
@@ -31,6 +30,7 @@ class Enemy2:
             self.enemy1_spawner.spawn_points = [[self.pos[0], self.pos[1]-50], [self.pos[0], self.pos[1]+50]]
 
         def corners(self):
+            '''Returns corners' pos'''
             top_left = (self.pos[0]-self.size[0]*0.5, self.pos[1]-self.size[1]*0.5)
             top_right = (self.pos[0]+self.size[0]*0.5, self.pos[1]-self.size[1]*0.5)
             bottom_right = (self.pos[0]+self.size[0]*0.5, self.pos[1]+self.size[1]*0.5)
@@ -38,8 +38,8 @@ class Enemy2:
 
             return (top_left, top_right, bottom_right, bottom_left)
     
-    def __init__(self, game, spawn_pos, direction, final_pos): # Init Function
-        #set variables
+    def __init__(self, game, spawn_pos, direction, final_pos):
+
         self.game = game
         self.pos = spawn_pos
         self.size = (300, 300)
@@ -67,18 +67,19 @@ class Enemy2:
         self.pos[1] += self.direction[1] * self.speed * dt
         if self.pos[0] <= self.final_pos[0]:
             self.pos = self.final_pos.copy()
-        print(self.pos)
-        print(self.final_pos)
+
         self.false_body.move()
 
         
 
     def enemy_hit(self):
+        '''Lose HP and Delete'''
         self.counter += 1
-        if self.counter >= 3:
+        if self.counter >= 5:
             self.game.enemy_list.remove(self)
 
     def corners(self):
+        '''Returns corners' pos'''
         top_left = (self.pos[0]-self.size[0]*0.5, self.pos[1]-self.size[1]*0.5)
         top_right = (self.pos[0]+self.size[0]*0.5, self.pos[1]-self.size[1]*0.5)
         bottom_right = (self.pos[0]+self.size[0]*0.5, self.pos[1]+self.size[1]*0.5)

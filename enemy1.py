@@ -4,8 +4,8 @@ from utils import *
 
 class Enemy1:
 
-    def __init__(self, game, spawn_pos, direction): # Init Function
-        #set variables
+    def __init__(self, game, spawn_pos, direction): 
+
         self.game = game
         self.pos = spawn_pos
         self.size = (48, 48)
@@ -25,9 +25,11 @@ class Enemy1:
         self.pos[1] += self.direction[1] * self.speed * dt
 
     def enemy_hit(self):
+        '''Delete Enemy'''
         self.game.enemy_list.remove(self)
 
     def corners(self):
+        '''Return corners' pos'''
         top_left = (self.pos[0]-self.size[0]*0.5, self.pos[1]-self.size[1]*0.5)
         top_right = (self.pos[0]+self.size[0]*0.5, self.pos[1]-self.size[1]*0.5)
         bottom_right = (self.pos[0]+self.size[0]*0.5, self.pos[1]+self.size[1]*0.5)

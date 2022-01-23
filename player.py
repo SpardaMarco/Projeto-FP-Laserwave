@@ -15,7 +15,7 @@ class Player:
     
 
 
-    def __init__(self, game) -> None:
+    def __init__(self, game):
         self.game = game
         self.img = pygame.image.load("Entities/Player.png") # Load Player PNG
         self.img.set_colorkey((255,0,255)) # Colorkey
@@ -31,7 +31,7 @@ class Player:
         self.game.screen.blit(self.img, (self.pos[0] - self.img.get_width()//2 , self.pos[1] - self.img.get_height()//2))
 
     def move(self, dt):
-        
+        '''Moves the Player'''
         #Max Speed
         self.speed[0] = min(max(self.speed[0], - self.max_speed), self.max_speed)
         self.speed[1] = min(max(self.speed[1], - self.max_speed), self.max_speed)
@@ -40,6 +40,7 @@ class Player:
         self.pos[1] += self.speed[1]*dt
     
     def boost(self):
+        '''Boost function'''
         mouse_pos = pygame.mouse.get_pos()
         vector = direction_vector(mouse_pos, self.pos)
 
@@ -52,14 +53,16 @@ class Player:
             self.speed[1] += vector[1] * self.boost_force
         else:
             self.speed[1] = vector[1] * self.boost_force
-        #self.boost_sound.play()
+
         
     def shoot(self):
+        '''Creates the bullet and Checks intersection'''
         mouse_pos = pygame.mouse.get_pos()
         vector = direction_vector(mouse_pos, self.pos)
 
         line = bullet.Bullet(self.game, self.pos)
         enemy = None
+
         for x in self.game.enemy_list:
             if line.check_intersection(x):
                 enemy = x
@@ -83,6 +86,7 @@ class Player:
 
     
     def physics(self, dt):
+        '''Applies physics'''
         self.speed[1] += self.gravity_force * dt
 
         if abs(self.speed[0]) < self.min_speed:
@@ -96,6 +100,7 @@ class Player:
 
 
     def border_collision(self):
+        '''Border Collision physics'''
         window_size = self.game.screen.get_size()
 
 
@@ -117,6 +122,8 @@ class Player:
 
 
     def check_intersection(self, rect):
+        '''Hitbox Check'''
+
         circle_distance_x = abs(self.pos[0] - rect.pos[0])
         circle_distance_y = abs(self.pos[1] - rect.pos[1])
 
@@ -133,7 +140,4 @@ class Player:
         corner_distance = (circle_distance_x - rect.size[0]/2 )**2 + (circle_distance_y - rect.size[1]/2 )**2
 
         return corner_distance <= ((self.size[0]/2)**2)
-
-    def kill(self):
-        pass
 
