@@ -5,13 +5,14 @@
 
 ### Objetivo
 
-1. Criar um clone simples da 1º versão do jogo [Laserwave](https://ambrits.itch.io/laserwave) em Pygame.
+1. Criar um clone simplista da 1º versão do jogo [Laserwave](https://ambrits.itch.io/laserwave) em Pygame.
 
-2. Organizar o meu primeiro projeto solo.
+2. Apontar para a implementação de features essenciais do jogo de modo a criar um jogo de "sobrevive o máximo de tempo possível" 
 
-3. Tentar produzir todas as resources possíveis do projeto.
+3. Organizar o meu primeiro projeto solo.
 
-4. Convencer o Professor __JCL__ a experimentar o meu jogo.
+4. Convencer o Professor __JCL__ a experimentar o meu projeto.
+
 
 ### Descrição
 
@@ -37,6 +38,21 @@ Sente o ritmo!---*
 
 ### Tarefas
 
-- Fazer com que o Player se mexa com intervalos de tempo aleatórios
+- Fazer os tipos de movimentos do Player
+- Fazer um SoundManager
+- Fazer um Spawner dos vários tipos de Inimigo
+- Fazer a bala
+- Fazer as hitboxes
+- Reorganizar o código
+- Mudar o main para game e criar um novo main
+- Criar uma state machine
+- Reorganizar o código pela segunda vez
+- Implementar um menu e um secção de créditos
+- Arranjar as resources auditivas
+- Fazer com que o Player se mexa com intervalos de tempo
+- Fazer a interface do Ritmo
+- Reorganizar o código pela terceira vez
+- Timer
+- Items, HP e HUD (X)
 
-- Atualizado a última vez em 23/12/2021
+- Atualizado a última vez em 23/01/2022
